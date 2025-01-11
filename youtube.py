@@ -26,10 +26,19 @@ def open_file_dialog():
     return folder
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # Initialize the new application window using tkinter
     root = tk.Tk()
     # Keeps the application running in the background
     root.withdraw()
 
+    # Prompt user for youtube url
     video_url = input("Please enter a YouTube url:")
+    # Open the file explorer so you can pick the save location
+    save_dir = open_file_dialog()
+
+    if save_dir:
+        print("Started download...")
+        download_video(video_url, save_dir)
+    else:
+        print("Invalid save location")
