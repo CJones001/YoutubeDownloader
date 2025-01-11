@@ -13,6 +13,12 @@ def download_video(url, save_path):
         highest_res_stream = streams.get_highest_resolution()
         # Download the selected video stream to the file save_path
         highest_res_stream.download(output_path=save_path)
-
+        print("Video downloaded successfully!")
+        
     except Exception as e:
         print(e)
+
+url = "https://www.youtube.com/watch?v=6RMl2CC4MEc"
+save_path = "C:/Users/reddn/OneDrive/Documents/My Web Sites/YoutubeDownloader"
+
+download_video(url, save_path)
