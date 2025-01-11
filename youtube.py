@@ -18,8 +18,10 @@ def download_video(url, save_path):
     except Exception as e:
         print(e)
 
-# random youtube url and this files save path so the video's saved to the same folder
-url = "https://www.youtube.com/watch?v=6RMl2CC4MEc"
-save_path = "C:/Users/reddn/OneDrive/Documents/My Web Sites/YoutubeDownloader"
+def open_file_dialog():
+    pass
 
-download_video(url, save_path)
+# Initialize the new application window using tkinter
+root = tk.Tk()
+# Keeps the application running in the background
+root.withdraw()
