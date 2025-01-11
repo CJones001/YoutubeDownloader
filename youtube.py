@@ -19,9 +19,17 @@ def download_video(url, save_path):
         print(e)
 
 def open_file_dialog():
-    pass
+    folder = filedialog.askdirectory()
+    if folder:
+        print(f"Selected folder: {folder}")
 
-# Initialize the new application window using tkinter
-root = tk.Tk()
-# Keeps the application running in the background
-root.withdraw()
+    return folder
+
+
+if _name_ == "_main_":
+    # Initialize the new application window using tkinter
+    root = tk.Tk()
+    # Keeps the application running in the background
+    root.withdraw()
+
+    video_url = input("Please enter a YouTube url:")
